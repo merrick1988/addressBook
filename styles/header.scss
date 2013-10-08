@@ -1,0 +1,23 @@
+header{
+	height: 70px;
+	box-shadow: 0 0 4px #000;
+	background: #363c32;
+	color: #fff;
+}
+.header__title{
+	color: #b4cf4a;
+	font-weight: normal;
+	font-size: 32px;
+	display: inline-block;
+}
+.logo{
+	margin: 10px 0;
+	display: inline-block;
+	height: 50px;
+	background: url("../images/logo.png");
+	background-size: 100%;
+	width: 55px;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	margin-right: 20px;
+}

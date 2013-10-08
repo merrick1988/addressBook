@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" ng-app="mainModule">
+<head>
+    <meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="styles/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+<body ng-controller="mainController">
+	<!-- HEADER -->
+	<header ng-include="'views/header.html'"></header>
+	<!-- END HEADER -->
+
+	<!-- MAIN SECTION -->
+	<section class="main" ng-include="'views/main.html'"></section>
+	<!-- END MAIN SECTION -->
+
+	<!-- FOOTER -->
+	<footer>
+		<div ng-include="'views/footer.html'"></div>
+	</footer>
+	<!-- END FOOTER -->
+
+    <script src="scripts/lib/angular/angular_v.1.2.0.js"></script>
+    <script src="scripts/app.js"></script>
+	<!-- Services  -->
+	<script src="scripts/services/contactService.js"></script>
+
+</body>
+</html>

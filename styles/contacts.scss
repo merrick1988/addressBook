@@ -2,8 +2,19 @@
 	@extend .icon-user;
 }
 .contacts__name{
-
+   color: $green;
+	font-size: 16px;
+	font-weight: bold;
 }
 .contacts__phone{
-
+	color: $white;
+}
+.contacts__phone:before{
+	content: "\f095";
+	display: inline-block;
+	font-family: fontawesome;
+	margin-right: 5px;
+}
+.add-contact__form{
+	margin-left: 20px;
 }

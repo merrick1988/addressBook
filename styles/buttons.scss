@@ -1,0 +1,32 @@
+.button{
+	background: $grey;
+	color: $green;
+	font-size: 18px;
+	padding: 5px 20px;
+	text-transform: uppercase;
+	border-radius: 15px;
+	cursor: pointer;
+}
+.disabled{
+	cursor: default;
+	opacity: 0.5;
+}
+
+.control-buttons{
+	display: inline-block;
+	float: right;
+	padding: 16px 0;
+}
+.control-container{
+	color: $green;
+	font-size: 26px;
+	cursor: pointer;
+}
+.control-button{
+	color: $grey;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+.control-button_add{
+	@extend .control-button
+}

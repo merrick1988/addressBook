@@ -1,44 +1,131 @@
+/*   colors  */
+/* line 1, C:/WebServers/home/localhost/www/addressBook/styles/buttons.scss */
+.button {
+  background: #777777;
+  color: #b4cf4a;
+  font-size: 18px;
+  padding: 5px 20px;
+  text-transform: uppercase;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+/* line 10, C:/WebServers/home/localhost/www/addressBook/styles/buttons.scss */
+.disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+/* line 15, C:/WebServers/home/localhost/www/addressBook/styles/buttons.scss */
+.control-buttons {
+  display: inline-block;
+  float: right;
+  padding: 16px 0;
+}
+
+/* line 20, C:/WebServers/home/localhost/www/addressBook/styles/buttons.scss */
+.control-container {
+  color: #b4cf4a;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* line 25, C:/WebServers/home/localhost/www/addressBook/styles/buttons.scss */
+.control-button, .control-button_add {
+  color: #777777;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* line 4, C:/WebServers/home/localhost/www/addressBook/styles/contacts.scss */
+.contacts__name {
+  color: #b4cf4a;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* line 9, C:/WebServers/home/localhost/www/addressBook/styles/contacts.scss */
+.contacts__phone {
+  color: white;
+}
+
+/* line 12, C:/WebServers/home/localhost/www/addressBook/styles/contacts.scss */
+.contacts__phone:before {
+  content: "\f095";
+  display: inline-block;
+  font-family: fontawesome;
+  margin-right: 5px;
+}
+
+/* line 18, C:/WebServers/home/localhost/www/addressBook/styles/contacts.scss */
+.add-contact__form {
+  margin-left: 20px;
+}
+
 /* line 1, C:/WebServers/home/localhost/www/addressBook/styles/flag.scss */
 .flag {
   display: table;
   width: 100%;
 }
 
-/* line 7, C:/WebServers/home/localhost/www/addressBook/styles/flag.scss */
+/* line 8, C:/WebServers/home/localhost/www/addressBook/styles/flag.scss */
 .flag__image,
-.flag__body {
+.flag__body,
+.flag__icon {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 11, C:/WebServers/home/localhost/www/addressBook/styles/flag.scss */
+/* line 12, C:/WebServers/home/localhost/www/addressBook/styles/flag.scss */
 .flag--top .flag__image, .flag--top
-.flag__body {
+.flag__body, .flag--top
+.flag__icon {
   vertical-align: top;
 }
-/* line 15, C:/WebServers/home/localhost/www/addressBook/styles/flag.scss */
+/* line 16, C:/WebServers/home/localhost/www/addressBook/styles/flag.scss */
 .flag--bottom .flag__image, .flag--bottom
-.flag__body {
+.flag__body, .flag--bottom
+.flag__icon {
   vertical-align: bottom;
 }
 
-/* line 21, C:/WebServers/home/localhost/www/addressBook/styles/flag.scss */
+/* line 22, C:/WebServers/home/localhost/www/addressBook/styles/flag.scss */
 .flag__image {
   padding-right: 10px;
 }
-/* line 24, C:/WebServers/home/localhost/www/addressBook/styles/flag.scss */
+/* line 25, C:/WebServers/home/localhost/www/addressBook/styles/flag.scss */
 .flag__image > img {
   display: block;
   max-width: none;
 }
-/* line 29, C:/WebServers/home/localhost/www/addressBook/styles/flag.scss */
+/* line 30, C:/WebServers/home/localhost/www/addressBook/styles/flag.scss */
 .flag--rev .flag__image {
   padding-right: 0;
   padding-left: 10px;
 }
 
-/* line 36, C:/WebServers/home/localhost/www/addressBook/styles/flag.scss */
+/* line 37, C:/WebServers/home/localhost/www/addressBook/styles/flag.scss */
 .flag__body {
   width: 100%;
+}
+
+/* line 42, C:/WebServers/home/localhost/www/addressBook/styles/flag.scss */
+.flag__icon {
+  color: white;
+  opacity: 0.3;
+  font-size: 36px;
+  padding-right: 20px;
+}
+
+/* line 1, C:/WebServers/home/localhost/www/addressBook/styles/form.scss */
+input {
+  width: 100%;
+  display: block;
+  background: white;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 0 8px #ccc;
+  padding: 10px;
+  margin: 20px 0;
 }
 
 /* line 1, C:/WebServers/home/localhost/www/addressBook/styles/header.scss */
@@ -89,10 +176,31 @@ header {
 
 /* line 6, C:/WebServers/home/localhost/www/addressBook/styles/list.scss */
 .list__item {
-  margin: 5px 0;
+  margin: 20px 0;
 }
 
-/* line 8, styles.scss */
+/* line 9, C:/WebServers/home/localhost/www/addressBook/styles/list.scss */
+.list__item:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  opacity: 0.2;
+  background: white;
+  margin-top: 20px;
+}
+
+/* line 1, C:/WebServers/home/localhost/www/addressBook/styles/text.scss */
+h2 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 22px;
+  font-weight: normal;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* line 18, styles.scss */
 body {
   font-family: Tahoma, Geneva, Kalimati, sans-serif;
   font-size: 14px;
@@ -101,7 +209,7 @@ body {
   background: url("../images/background.jpg");
 }
 
-/* line 16, styles.scss */
+/* line 26, styles.scss */
 h3 {
   margin: 0;
   padding: 5px;

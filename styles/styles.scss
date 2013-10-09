@@ -1,9 +1,19 @@
+/*   colors  */
+$green: #b4cf4a;
+$white: #fff;
+$grey: #777;
+
+@import "buttons";
 @import "contacts";
 @import "flag";
+@import "form";
 @import "header";
 @import "icon";
 @import "list";
 @import "main";
+@import "text";
+
+
 
 body{
 	font-family: Tahoma, Geneva, Kalimati, sans-serif;
@@ -18,3 +28,5 @@ h3{
 	padding: 5px;
 
 }
+
+

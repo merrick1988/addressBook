@@ -4,5 +4,14 @@
 	padding: 0;
 }
 .list__item{
-	margin: 5px 0;
+	margin: 20px 0;
+}
+.list__item:after{
+	content: "";
+	display: block;
+	height: 2px;
+	width: 100%;
+	opacity: 0.2;
+	background: $white;
+	margin-top: 20px;
 }

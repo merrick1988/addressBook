@@ -4,7 +4,8 @@
 }
 
 .flag__image,
-.flag__body {
+.flag__body,
+.flag__icon{
 	display: table-cell;
 	vertical-align: middle;
 
@@ -35,4 +36,12 @@
 
 .flag__body {
 	width: 100%;
+
+}
+
+.flag__icon{
+	color: $white;
+	opacity: 0.3;
+	font-size: 36px;
+	padding-right: 20px;
 }

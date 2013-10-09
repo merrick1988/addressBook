@@ -1,5 +1,5 @@
 <div class="main-container col-md-8 col-md-offset-2">
-	<ul class="list">
+	<ul class="list col-md-6">
 		<li class="list__item contacts" ng-repeat="contact in contacts">
 			<div class="flag">
 				<div class="flag__image">
@@ -9,7 +9,22 @@
 					<div class="contacts__name">{{contact.name}}</div>
 					<div class="contacts__phone">{{contact.phone}}</div>
 				</div>
+				<span class="flag__icon icon-angle-right"></span>
 			</div>
+
 		</li>
 	</ul>
+	<div class="col-md-6">
+		<div class="contact-detail add-contact" ng-show="newContact">
+			<h2>Create new contact</h2>
+			<div class="add-contact__form" ng-form name="addContactForm">
+				<input type="text" ng-model="newContact.name" placeholder="Name" required />
+				<input type="text" ng-model="newContact.phone" numbers-only="numbers-only" placeholder="Phone Number" required/>
+				<span class="button pull-right" ng-click="addContact()" ng-class="{'disabled': addContactForm.$invalid}">Create contact</span>
+			</div>
+		</div>
+		<div class="contact-detail">
+
+		</div>
+	</div>
 </div>

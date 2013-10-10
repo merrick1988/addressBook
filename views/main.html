@@ -1,6 +1,6 @@
 <div class="main-container col-md-8 col-md-offset-2">
 	<ul class="list col-md-6">
-		<li class="list__item contacts" ng-repeat="contact in contacts">
+		<li class="list__item contacts" ng-repeat="contact in contacts" ng-click="showContactDetails(contact)">
 			<div class="flag">
 				<div class="flag__image">
 					<span class="contacts__image">{{contact.image}}</span>
@@ -15,16 +15,26 @@
 		</li>
 	</ul>
 	<div class="col-md-6">
-		<div class="contact-detail add-contact" ng-show="newContact">
+		<div class="contact-detail" ng-show="newContact">
 			<h2>Create new contact</h2>
-			<div class="add-contact__form" ng-form name="addContactForm">
+			<form name="addContactForm">
 				<input type="text" ng-model="newContact.name" placeholder="Name" required />
 				<input type="text" ng-model="newContact.phone" numbers-only="numbers-only" placeholder="Phone Number" required/>
 				<span class="button pull-right" ng-click="addContact()" ng-class="{'disabled': addContactForm.$invalid}">Create contact</span>
-			</div>
+			</form>
 		</div>
-		<div class="contact-detail">
-
+		<div class="contact-detail" ng-show="currentContact">
+			<input type="text" ng-model="currentContact.name" readonly />
+			<input type="text" ng-model="currentContact.phone" readonly/>
+			<span class="button pull-right" ng-click="editContact()">Edit contact</span>
+			<span class="button pull-right" ng-click="deleteContact()">Delete contact</span>
+		</div>
+		<div class="contact-detail" ng-show="editModeContact">
+			<form name="editContactForm">
+				<input type="text" ng-model="editModeContact.name" placeholder="Name" required />
+				<input type="text" ng-model="editModeContact.phone" numbers-only="numbers-only" placeholder="Phone Number" required/>
+				<span class="button pull-right" ng-click="saveContact()" ng-class="{'disabled': editContactForm.$invalid}">Save contact</span>
+			</form>
 		</div>
 	</div>
 </div>

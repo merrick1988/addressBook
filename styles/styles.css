@@ -8,29 +8,30 @@
   text-transform: uppercase;
   border-radius: 15px;
   cursor: pointer;
+  margin-left: 10px;
 }
 
-/* line 10, C:/WebServers/home/localhost/www/addressBook/styles/buttons.scss */
+/* line 11, C:/WebServers/home/localhost/www/addressBook/styles/buttons.scss */
 .disabled {
   cursor: default;
   opacity: 0.5;
 }
 
-/* line 15, C:/WebServers/home/localhost/www/addressBook/styles/buttons.scss */
+/* line 16, C:/WebServers/home/localhost/www/addressBook/styles/buttons.scss */
 .control-buttons {
   display: inline-block;
   float: right;
   padding: 16px 0;
 }
 
-/* line 20, C:/WebServers/home/localhost/www/addressBook/styles/buttons.scss */
+/* line 21, C:/WebServers/home/localhost/www/addressBook/styles/buttons.scss */
 .control-container {
   color: #b4cf4a;
   font-size: 26px;
   cursor: pointer;
 }
 
-/* line 25, C:/WebServers/home/localhost/www/addressBook/styles/buttons.scss */
+/* line 26, C:/WebServers/home/localhost/www/addressBook/styles/buttons.scss */
 .control-button, .control-button_add {
   color: #777777;
   padding: 5px 10px;
@@ -59,6 +60,11 @@
 
 /* line 18, C:/WebServers/home/localhost/www/addressBook/styles/contacts.scss */
 .add-contact__form {
+  margin-left: 20px;
+}
+
+/* line 21, C:/WebServers/home/localhost/www/addressBook/styles/contacts.scss */
+.contact-detail {
   margin-left: 20px;
 }
 
@@ -117,6 +123,11 @@
 }
 
 /* line 1, C:/WebServers/home/localhost/www/addressBook/styles/form.scss */
+form {
+  margin: 0;
+}
+
+/* line 4, C:/WebServers/home/localhost/www/addressBook/styles/form.scss */
 input {
   width: 100%;
   display: block;
@@ -176,10 +187,16 @@ header {
 
 /* line 6, C:/WebServers/home/localhost/www/addressBook/styles/list.scss */
 .list__item {
-  margin: 20px 0;
+  padding-top: 20px;
+  cursor: pointer;
 }
 
-/* line 9, C:/WebServers/home/localhost/www/addressBook/styles/list.scss */
+/* line 10, C:/WebServers/home/localhost/www/addressBook/styles/list.scss */
+.list__item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 13, C:/WebServers/home/localhost/www/addressBook/styles/list.scss */
 .list__item:after {
   content: "";
   display: block;

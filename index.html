@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="styles/alertify.default.css">
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
-<body ng-controller="mainController">
+<body ng-controller="contactController">
 	<!-- HEADER -->
 	<header ng-include="'views/header.html'"></header>
 	<!-- END HEADER -->
@@ -27,10 +27,13 @@
 	<script src="scripts/lib/jQuery/jQuery.js"></script>
 	<script src="scripts/lib/bootstrap/bootstrap.js"></script>
 	<script src="scripts/lib/alertify/alertify.js"></script>
+	<script src="scripts/lib/underscore/underscore.js"></script>
     <script src="scripts/lib/angular/angular_v.1.2.0.js"></script>
 
+	<script src="scripts/app.js"></script>
+
 	<!-- Controllers  -->
-    <script src="scripts/app.js"></script>
+	<script src="scripts/controllers/contactController.js"></script>
 
 	<!-- Services  -->
 	<script src="scripts/services/contactService.js"></script>

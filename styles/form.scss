@@ -11,3 +11,15 @@ input{
 	padding: 10px;
 	margin: 20px 0;
 }
+input:focus{
+	outline: none;
+}
+.input_search:after{
+	content: "\f002";
+	position: absolute;
+	right: 10px;
+	display: inline-block;
+	font-family: fontawesome;
+	font-size: 22px;
+}
+

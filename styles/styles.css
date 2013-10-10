@@ -139,6 +139,21 @@ input {
   margin: 20px 0;
 }
 
+/* line 14, C:/WebServers/home/localhost/www/addressBook/styles/form.scss */
+input:focus {
+  outline: none;
+}
+
+/* line 17, C:/WebServers/home/localhost/www/addressBook/styles/form.scss */
+.input_search:after {
+  content: "\f002";
+  position: absolute;
+  right: 10px;
+  display: inline-block;
+  font-family: fontawesome;
+  font-size: 22px;
+}
+
 /* line 1, C:/WebServers/home/localhost/www/addressBook/styles/header.scss */
 header {
   height: 70px;

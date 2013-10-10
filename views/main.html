@@ -1,6 +1,7 @@
 <div class="main-container col-md-8 col-md-offset-2">
 	<ul class="list col-md-6">
-		<li class="list__item contacts" ng-repeat="contact in contacts" ng-click="showContactDetails(contact)">
+		<input type="text" ng-model="search" class="input_search" placeholder="Search..."/>
+		<li class="list__item contacts" ng-repeat="contact in contacts | filter:search" ng-click="showContactDetails(contact)">
 			<div class="flag">
 				<div class="flag__image">
 					<span class="contacts__image">{{contact.image}}</span>

@@ -39,19 +39,19 @@
 }
 
 /* line 4, C:/WebServers/home/localhost/www/addressBook/styles/contacts.scss */
-.contacts__name {
+.contact__name {
   color: #b4cf4a;
   font-size: 16px;
   font-weight: bold;
 }
 
 /* line 9, C:/WebServers/home/localhost/www/addressBook/styles/contacts.scss */
-.contacts__phone {
+.contact__phone {
   color: white;
 }
 
 /* line 12, C:/WebServers/home/localhost/www/addressBook/styles/contacts.scss */
-.contacts__phone:before {
+.contact__phone:before {
   content: "\f095";
   display: inline-block;
   font-family: fontawesome;
@@ -154,6 +154,14 @@ input:focus {
   font-size: 22px;
 }
 
+/* line 7, C:/WebServers/home/localhost/www/addressBook/styles/groups.scss */
+.group__name {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  color: #b4cf4a;
+  font-size: 22px;
+}
+
 /* line 1, C:/WebServers/home/localhost/www/addressBook/styles/header.scss */
 header {
   height: 70px;
@@ -184,7 +192,7 @@ header {
 }
 
 /* line 1, C:/WebServers/home/localhost/www/addressBook/styles/icon.scss */
-.icon-user, .contacts__image {
+.icon_user, .contact__image {
   display: block;
   width: 50px;
   height: 50px;
@@ -194,25 +202,25 @@ header {
 }
 
 /* line 1, C:/WebServers/home/localhost/www/addressBook/styles/list.scss */
-.list {
+.contact-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 /* line 6, C:/WebServers/home/localhost/www/addressBook/styles/list.scss */
-.list__item {
+.contact-list__item {
   padding-top: 20px;
   cursor: pointer;
 }
 
 /* line 10, C:/WebServers/home/localhost/www/addressBook/styles/list.scss */
-.list__item:hover {
+.contact-list__item:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* line 13, C:/WebServers/home/localhost/www/addressBook/styles/list.scss */
-.list__item:after {
+.contact-list__item:after {
   content: "";
   display: block;
   height: 2px;
@@ -232,7 +240,7 @@ h2 {
   text-align: center;
 }
 
-/* line 18, styles.scss */
+/* line 19, styles.scss */
 body {
   font-family: Tahoma, Geneva, Kalimati, sans-serif;
   font-size: 14px;
@@ -241,7 +249,7 @@ body {
   background: url("../images/background.jpg");
 }
 
-/* line 26, styles.scss */
+/* line 27, styles.scss */
 h3 {
   margin: 0;
   padding: 5px;

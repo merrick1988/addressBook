@@ -1,0 +1,6 @@
+<h2>Create new contact</h2>
+<form name="addContactForm">
+	<input type="text" ng-model="newContact.name" placeholder="Name" required />
+	<input type="text" ng-model="newContact.phone" numbers-only="numbers-only" placeholder="Phone Number" required/>
+	<span class="button pull-right" ng-click="addContact()" ng-class="{'disabled': addContactForm.$invalid}">Create contact</span>
+</form>

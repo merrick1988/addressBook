@@ -29,11 +29,11 @@
 				alertify.success("Contact was added successfully");
 			};
 
-			$scope.showAddContact = function(){
+			$scope.$on("contacts.add", function(){
 				$scope.newContact = {};
 				$scope.currentContact = null;
 				$scope.editModeContact = null;
-			};
+			});
 
 			$scope.addContact = function(){
 				if(!$scope.newContact || !$scope.newContact.name || !$scope.newContact.phone) return;
@@ -41,12 +41,11 @@
 			}
 
 			/* Current Contact*/
-
 			$scope.showContactDetails = function(contact){
 				$scope.newContact = null;
 				$scope.editModeContact = null;
 				$scope.currentContact = contact;
-			}
+			};
 
 			/* Edit contact*/
 			onSaveContactSuccess = function(){

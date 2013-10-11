@@ -1,21 +1,9 @@
-<div class="main-container col-md-8 col-md-offset-2">
-	<ul class="list col-md-6">
-		<input type="text" ng-model="search" class="input_search" placeholder="Search..."/>
-		<li class="list__item contacts" ng-repeat="contact in contacts | filter:search" ng-click="showContactDetails(contact)">
-			<div class="flag">
-				<div class="flag__image">
-					<span class="contacts__image">{{contact.image}}</span>
-				</div>
-				<div class="flag__body">
-					<div class="contacts__name">{{contact.name}}</div>
-					<div class="contacts__phone">{{contact.phone}}</div>
-				</div>
-				<span class="flag__icon icon-angle-right"></span>
-			</div>
-
-		</li>
-	</ul>
-	<div class="col-md-6">
+<div class="main-container col-md-8 col-md-offset-2" ng-controller="contactController">
+	<div class="list col-md-6">
+		<div ng-include="'views/contacts/contact-list.html'"></div>
+	</div>
+	<div ui-right></div>
+	<div class="col-md-6" ui-right>
 		<div class="contact-detail" ng-show="newContact">
 			<h2>Create new contact</h2>
 			<form name="addContactForm">
@@ -38,4 +26,5 @@
 			</form>
 		</div>
 	</div>
+
 </div>

@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular.module("mainModule").
-		service("contactService", ['$timeout', function($timeout){
+		service("contactService", [function(){
 			var self = this;
 			    self.contacts;
 
@@ -10,21 +10,25 @@
 				self.contacts = [
 					{
 						id: "1",
+						group: "group_1",
 						name: "First Contact",
 						phone: "111-111-11"
 					},
 					{
 						id: "2",
+						group: "group_1",
 						name: "Second Contact",
 						phone: "222-222-22"
 					},
 					{
 						id: "3",
+						group: "group_2",
 						name: "Third contact",
 						phone: "333-333-33"
 					},
 					{
 						id: "4",
+						group: "group_2",
 						name: "Fourth Contact",
 						phone: "444-444-44"
 					}

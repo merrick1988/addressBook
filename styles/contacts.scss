@@ -1,15 +1,15 @@
-.contacts__image{
-	@extend .icon-user;
+.contact__image{
+	@extend .icon_user;
 }
-.contacts__name{
+.contact__name{
    color: $green;
 	font-size: 16px;
 	font-weight: bold;
 }
-.contacts__phone{
+.contact__phone{
 	color: $white;
 }
-.contacts__phone:before{
+.contact__phone:before{
 	content: "\f095";
 	display: inline-block;
 	font-family: fontawesome;

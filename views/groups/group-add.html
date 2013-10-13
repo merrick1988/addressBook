@@ -1,0 +1,5 @@
+<h2>Create new Group</h2>
+<form name="addGroupForm">
+    <input type="text" ng-model="newGroup.name" placeholder="Name" required />
+    <span class="button pull-right" ng-click="addGroup()" ng-class="{'disabled': addGroupForm.$invalid}">Create group</span>
+</form>

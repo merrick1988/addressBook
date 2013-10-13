@@ -22,4 +22,7 @@ input:focus{
 	font-family: fontawesome;
 	font-size: 22px;
 }
+select{
+  @extend input;
+}
 

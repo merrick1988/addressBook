@@ -1,26 +1,17 @@
-<input type="text" ng-model="search" class="input_search" placeholder="Search..."/>
-
-<div ng-controller="groupController">
-	<div class="group-list" ng-repeat="group in groups | orderBy: 'name'" ng-model="group.id">
-		<div class="group-list__item">
-			<div class="group__name">
-				<i class="icon-comments-alt"></i> {{group.name}}
-			</div>
-			<ul class="contact-list">
-				<li class="contact-list__item contacts" ng-repeat="contact in contacts | filter: group.id | filter:search | orderBy: 'name'" ng-click="showContactDetails(contact)">
-					<div class="flag">
-						<div class="flag__image">
-							<span class="contact__image">{{contact.image}}</span>
-						</div>
-						<div class="flag__body">
-							<div class="contact__name">{{contact.name}}</div>
-							<div class="contact__phone">{{contact.phone}}</div>
-						</div>
-						<span class="flag__icon icon-angle-right"></span>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-</div>
+<ul class="contact-list" ng-class="{'collapsed':group.isCollapsed}">
+    <li class="contact-list__item contacts" ng-repeat="contact in contacts | filter: group.id | filter:search | orderBy: 'name'">
+        <a href="#/contact-item_{{contact.id}}">
+            <div class="flag">
+                <div class="flag__image">
+                    <span class="contact__image">{{contact.image}}</span>
+                </div>
+                <div class="flag__body">
+                    <div class="contact__name">{{contact.name}}</div>
+                    <div class="contact__phone">{{contact.phone}}</div>
+                </div>
+                <span class="flag__icon icon-angle-right"></span>
+            </div>
+        </a>
+    </li>
+</ul>
 

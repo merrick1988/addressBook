@@ -1,0 +1,20 @@
+<div class="contact-item__card">
+    <div class="contact-item__image">
+        <img src="images/userpick_big.png" alt="User Picture"/>
+    </div>
+    <div class="contact-item__info">
+        <h2 class="contact-item__name">{{contact.name}}</h2>
+        <div class="contact-item__phone">
+            <i class="icon-phone contact-item__icon">:</i>
+            {{contact.phone}}
+        </div>
+        <div class="contact-item__group">
+            <i class="icon-group contact-item__icon">:</i>
+            {{getContactGroup(contact)}}
+        </div>
+    </div>
+    <div class="contact-item__buttons">
+        <a href="#/contact-edit_{{contact.id}}" class="button pull-right">Edit contact</a>
+        <span class="button pull-right" ng-click="deleteContact(contact)">Delete contact</span>
+    </div>
+</div>

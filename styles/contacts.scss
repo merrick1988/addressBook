@@ -1,5 +1,5 @@
 .contact__image{
-	@extend .icon_user;
+	@extend .icon-user;
 }
 .contact__name{
    color: $green;
@@ -20,4 +20,39 @@
 }
 .contact-detail{
 	margin-left: 20px;
+}
+.contact-item__card{
+  margin: 20px 10px;
+}
+.contact-item__image,
+.contact-item__info{
+  width: 49%;
+  height: auto;
+  display: inline-block;
+}
+.contact-item__image img{
+  width: 100%;
+}
+.contact-item__name{
+   color: $green;
+   font-weight: bold;
+   font-size: 26px;
+ }
+.contact-item__phone,
+.contact-item__group{
+  color: $white;
+  font-size: 18px;
+  margin: 10px 0;
+}
+.contact-item__icon{
+  margin: 0 5px;
+  font-size: 18px;
+}
+.contact-item__icon:before{
+  margin: 0 5px;
+  width: 20px;
+  text-align: center;
+}
+.contact-item__buttons{
+  margin: 25px 0;
 }

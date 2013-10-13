@@ -2,5 +2,8 @@
 <form name="addContactForm">
 	<input type="text" ng-model="newContact.name" placeholder="Name" required />
 	<input type="text" ng-model="newContact.phone" numbers-only="numbers-only" placeholder="Phone Number" required/>
+    <select ng-model="newContact.group" ng-options="group.name for group in groupArray">
+        <option value="">-- Please select --</option>
+    </select>
 	<span class="button pull-right" ng-click="addContact()" ng-class="{'disabled': addContactForm.$invalid}">Create contact</span>
 </form>

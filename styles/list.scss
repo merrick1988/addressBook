@@ -1,7 +1,16 @@
 .contact-list{
 	list-style: none;
 	margin: 0;
+    margin-bottom: 5px;
 	padding: 0;
+    transition: all 0.5s ease;
+    position: relative;
+    height: auto;
+}
+.contact-list.collapsed{
+    height: 0px;
+    overflow: hidden;
+    margin-bottom: 5px;
 }
 .contact-list__item{
 	padding-top: 20px;

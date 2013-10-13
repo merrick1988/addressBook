@@ -1,0 +1,21 @@
+<input type="text" ng-model="search" class="input_search" placeholder="Search..."/>
+
+<div ng-controller="groupListController">
+    <div class="group-list" ng-repeat="group in groups | orderBy: '-id'" ng-model="group.id">
+        <div class="group-list__item">
+            <div class="group__name" ng-click="toggleGroup(group)" ng-class="">
+                <i class="icon-comments-alt"></i> {{group.name}} ({{getCountContactInGroup(group)}})
+                <div class="croup_collapse-icon">
+                    <i class="icon-caret-left" ng-show="group.isCollapsed"></i>
+                    <i class="icon-caret-down" ng-show="!group.isCollapsed"></i>
+                </div>
+            </div>
+            <div class="group-control" ng-show="!group.isCollapsed">
+                <a href="#/group-edit_{{group.id}}" class="group-control__edit"><i class="icon-pencil"></i></a>
+                <span class="group-control__delete" ng-click="deleteGroup(group)"><i class="icon-trash"></i></span>
+            </div>
+            <div ng-include="'views/contacts/contact-list.html'"></div>
+        </div>
+    </div>
+</div>
+

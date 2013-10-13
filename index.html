@@ -8,19 +8,17 @@
 	<link rel="stylesheet" type="text/css" href="styles/alertify.default.css">
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
-<body ng-controller="mainController">
+<body>
 	<!-- HEADER -->
 	<header ng-include="'views/header.html'"></header>
 	<!-- END HEADER -->
 
 	<!-- MAIN SECTION -->
-	<section class="main" ng-include="'views/main.html'"></section>
+    <div class="main" ui-view></div>
 	<!-- END MAIN SECTION -->
 
 	<!-- FOOTER -->
-	<footer>
-		<div ng-include="'views/footer.html'"></div>
-	</footer>
+	<footer ng-include="'views/footer.html'"></footer>
 	<!-- END FOOTER -->
 
 	<!-- Lib  -->
@@ -30,17 +28,20 @@
 	<script src="scripts/lib/underscore/underscore.js"></script>
     <script src="scripts/lib/angular/angular_v.1.2.0.js"></script>
     <script src="scripts/lib/angular/angular-ui-router.js"></script>
+    <script src="scripts/lib/angular/angularLocalStorage.js"></script>
 
 	<script src="scripts/app.js"></script>
 
-	<!-- Controllers  -->
-	<script src="scripts/controllers/mainController.js"></script>
-	<script src="scripts/controllers/contactController.js"></script>
-	<script src="scripts/controllers/groupController.js"></script>
+	<!-- Contacts  -->
+	<script src="scripts/contacts/addContactController.js"></script>
+	<script src="scripts/contacts/contactsListController.js"></script>
+    <script src="scripts/contacts/contactService.js"></script>
 
-	<!-- Services  -->
-	<script src="scripts/services/contactService.js"></script>
-	<script src="scripts/services/groupService.js"></script>
+    <!-- Groups  -->
+    <script src="scripts/groups/addGroupController.js"></script>
+    <script src="scripts/groups/editGroupController.js"></script>
+    <script src="scripts/groups/groupListController.js"></script>
+    <script src="scripts/groups/groupService.js"></script>
 
 	<!-- Directives  -->
 	<script src="scripts/directives/numberOnly.js"></script>

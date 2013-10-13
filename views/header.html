@@ -1,23 +1,18 @@
 <div class="header-container col-md-8 col-md-offset-2">
-	<span class="logo"></span>
-	<h3 class="header__title">Address Book</h3>
+    <a href="#">
+        <span class="logo"></span>
+        <h3 class="header__title">Address Book</h3>
+    </a>
+
 	<div class="control-buttons">
 		<div class="dropdown">
 			<span data-toggle="dropdown" class="control-container dropdown-toggle"><i class="icon-align-justify"></i></span>
 			<ul class="dropdown-menu" role="menu">
-				<li class="control-button_add" ng-click="showContactView()">
-					<i class="icon-user"></i>
-					View All Contacts
-				</li>
-				<li class="control-button_add" ng-click="showGroupsView()">
-					<i class="icon-group"></i>
-					View All Groups
-				</li>
-				<li class="control-button_add" ng-click="showAddContact()">
+				<li class="control-button_add" ui-sref="index.add-contact">
 					<i class="icon-plus"></i>
 					Add contact
 				</li>
-				<li class="control-button_add" ng-click="showAddGroup()">
+				<li class="control-button_add" ui-sref="index.add-group">
 					<i class="icon-plus"></i>
 					Add group
 				</li>

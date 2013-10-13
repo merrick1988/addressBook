@@ -1,0 +1,10 @@
+<h2>Edit Contact</h2>
+<form name="editContactForm">
+    <img src="images/userpick_big.png" alt="User Picture" class="icon-user_big"/>
+    <input type="text" ng-model="contact.name" placeholder="Name" required />
+    <input type="text" ng-model="contact.phone" numbers-only="numbers-only" placeholder="Phone Number" required/>
+    <select ng-model="contact.group" ng-options="group.name for group in groups">
+        <option value="">-- Please select --</option>
+    </select>
+    <span class="button pull-right" ng-click="saveContact(contact)" ng-class="{'disabled': editContactForm.$invalid}">Save contact</span>
+</form>

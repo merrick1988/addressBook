@@ -1,30 +1,6 @@
-<div class="main-container col-md-8 col-md-offset-2" ng-controller="contactController">
+<div class="main-container col-md-8 col-md-offset-2">
 	<div class="list col-md-6">
-		<div ng-include="'views/contacts/contact-list.html'"></div>
+		<div ng-include="'views/groups/group-list.html'"></div>
 	</div>
-	<div ui-right></div>
-	<div class="col-md-6" ui-right>
-		<div class="contact-detail" ng-show="newContact">
-			<h2>Create new contact</h2>
-			<form name="addContactForm">
-				<input type="text" ng-model="newContact.name" placeholder="Name" required />
-				<input type="text" ng-model="newContact.phone" numbers-only="numbers-only" placeholder="Phone Number" required/>
-				<span class="button pull-right" ng-click="addContact()" ng-class="{'disabled': addContactForm.$invalid}">Create contact</span>
-			</form>
-		</div>
-		<div class="contact-detail" ng-show="currentContact">
-			<input type="text" ng-model="currentContact.name" readonly />
-			<input type="text" ng-model="currentContact.phone" readonly/>
-			<span class="button pull-right" ng-click="editContact()">Edit contact</span>
-			<span class="button pull-right" ng-click="deleteContact()">Delete contact</span>
-		</div>
-		<div class="contact-detail" ng-show="editModeContact">
-			<form name="editContactForm">
-				<input type="text" ng-model="editModeContact.name" placeholder="Name" required />
-				<input type="text" ng-model="editModeContact.phone" numbers-only="numbers-only" placeholder="Phone Number" required/>
-				<span class="button pull-right" ng-click="saveContact()" ng-class="{'disabled': editContactForm.$invalid}">Save contact</span>
-			</form>
-		</div>
-	</div>
-
+    <div class="col-md-6" ui-view></div>
 </div>

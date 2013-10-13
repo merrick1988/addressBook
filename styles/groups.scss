@@ -9,4 +9,32 @@
 	padding: 20px;
 	color: $green;
 	font-size: 22px;
+    position: relative;
+    cursor: pointer;
+}
+.croup_collapse-icon{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -14px;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+}
+.group-control{
+  padding: 5px 0;
+  font-size: 22px;
+  text-align: right;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.group-control__delete,
+.group-control__edit{
+  margin: 0 10px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.group-control__delete:hover,
+.group-control__edit:hover{
+  opacity: 1;
 }

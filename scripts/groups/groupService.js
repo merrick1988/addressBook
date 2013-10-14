@@ -27,6 +27,12 @@
                 }
             };
 
+			self.getGroupById = function(id){
+				return _.find(self.groups, function(group){
+					return group.id == id
+				});
+			};
+
 			self.loadGroups =  function(){
                 var result = JSON.parse(localStorageService.get("groups"));
                 if(result && result.length){

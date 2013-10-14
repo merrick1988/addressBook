@@ -26,12 +26,7 @@
                     .state('index.edit', {
                         url: '/contact-edit_:id',
                         templateUrl: 'views/contacts/contact-edit.html',
-                        controller: function($scope, $stateParams, contactService){
-                            $scope.contact = _.find(contactService.contacts, function(contact){
-                                var contactId = $stateParams.id.replace(/contact-edit\_(.)/, '$1')
-                                return contact.id == contactId
-                            })
-                        }
+                        controller: 'editContactController'
                     })
 					.state('index.add-contact', {
                         url: '/add-contact',

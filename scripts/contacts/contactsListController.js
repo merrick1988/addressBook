@@ -8,36 +8,12 @@
             function($scope, $log, contactService, groupService){
 
             var init,
-                onFail,
-                onSaveContactSuccess,
                 onDeleteContactSuccess;
-
-            onFail = function(errorMessage){
-                errorMessage && $log.error(errorMessage);
-            };
 
             init = function(){
                 contactService.loadContacts();
-                groupService.loadGroups();
                 $scope.contacts = contactService.contacts;
-                $scope.groups = groupService.groups;
             };
-
-            /* Edit contact*/
-            onSaveContactSuccess = function(){
-                $scope.editModeContact = null;
-                alertify.success("Contact was saved successfully");
-            };
-
-            $scope.editContact = function(){
-                $scope.editModeContact = angular.copy($scope.currentContact);
-                $scope.currentContact = null;
-                $scope.newContact = null;
-            }
-
-            $scope.saveContact = function(contact){
-                contactService.saveContact(contact, onSaveContactSuccess);
-            }
 
             /* Delete contact*/
             onDeleteContactSuccess = function(){

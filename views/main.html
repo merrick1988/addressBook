@@ -1,6 +1,21 @@
-<div class="main-container col-md-8 col-md-offset-2">
+<div class="main-container col-md-8 col-md-offset-2" ng-controller="groupListController">
 	<div class="list col-md-6">
 		<div ng-include="'views/groups/group-list.html'"></div>
 	</div>
-    <div class="col-md-6" ui-view></div>
+    <div class="col-md-6" ui-view>
+		<div ng-show="!contacts.length" class="empty-contacts">
+			<div class="empty-contacts__message">
+				<img src="images/no-contacts.png" alt=""  ng-show="showEmptyImage"/>
+				<img src="images/create.png" alt="" ng-show="!showEmptyImage"/>
+				<h3>You have no contacts yet!</h3>
+			</div>
+
+			<a href="#/add-contact">
+				<span class="empty-contacts__link" ng-mouseenter="showEmptyImage = false" ng-mouseleave="showEmptyImage = true">
+					Create your First Contact
+				</span>
+			</a>
+		</div>
+    </div>
+
 </div>

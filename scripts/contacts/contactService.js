@@ -24,6 +24,12 @@
                 };
 			};
 
+			self.getContactById = function(id){
+				return _.find(self.contacts, function(contact){
+					return contact.id == id
+				});
+			};
+
 			self.addContact =  function(contact, success){
 
                 if(!contact) return;

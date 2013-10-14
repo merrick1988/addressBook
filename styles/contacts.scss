@@ -56,3 +56,32 @@
 .contact-item__buttons{
   margin: 25px 0;
 }
+
+.empty-contacts{
+	margin: 25px 0;
+}
+.empty-contacts__link{
+	display: block;
+	border: 3px dashed $green;
+	width: 50%;
+	margin: 0 auto;
+	padding: 25px;
+	border-radius: 20px;
+	text-align: center;
+	font-size: 25px;
+	color: $green;
+	font-weight: bold;
+	text-shadow: 0 0 5px #000;
+	cursor: pointer;
+}
+.empty-contacts__link:hover{
+	background: rgba(255, 255, 255, 0.1);
+}
+.empty-contacts__message{
+	margin: 25px 0;
+	text-align: center;
+}
+.empty-contacts__message h3{
+	font-size: 26px;
+	opacity: 0.5;
+}

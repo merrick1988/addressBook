@@ -17,6 +17,8 @@
                     $scope.groups = groupService.groups;
                 };
 
+				$scope.showEmptyImage = true;
+
                 $scope.getCountContactInGroup = function(group){
 
                     var contactsArray =  _.filter(contactService.contacts, function(contact){
